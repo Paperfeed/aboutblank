@@ -1,0 +1,13 @@
+query blogposts {
+    blogposts {
+        createdOn
+        slug
+        title
+        content
+        author {
+            name
+            avatar
+            title
+        }
+    }
+}
