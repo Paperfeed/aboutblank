@@ -73,5 +73,4 @@ type Subscription {
     counter: Counter!
     # When a new message is added
     messageAdded: Message!
-
 }

@@ -1,34 +1,14 @@
-# aboutblank
+# about:blank
 
-## Project setup
-```
-npm install
-```
+Boilerplate for a Vue project using Typescript, Babel, PostCSS, VueX, Router, Storybook, GraphQL (incl. GraphQL server with mocking) and Bulma.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+To get it up and running just run 
+```npm install```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+To start the GraphQL server and run the client locally run 
+```npm run serve``` and ```npm run apollo```.
+ This will run the Vue app and GraphQL server in watch mode - 
+ allowing any updates to immediately propagate
+ 
+For the rest just look in the ```project.json```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
