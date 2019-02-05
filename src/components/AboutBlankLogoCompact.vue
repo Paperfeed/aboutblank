@@ -34,6 +34,14 @@
             }
         }
 
+        &.small {
+            max-width: 280px;
+        }
+
+        &.centered {
+            margin: 0 auto;
+        }
+
         &.full-screen {
             max-height: calc(100vh - 40px);
         }

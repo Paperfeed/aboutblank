@@ -55,6 +55,7 @@ type Query {
     messages: [Message]
     uploads: [File]
     blogposts: [BlogPost]
+    employees: [Author]
 }
 
 type Mutation {

@@ -9,7 +9,6 @@
                           v-bind:css="false"
                           @before-enter="beforeEnter"
                           @enter="enter">
-
             <blog-post v-for="(post, index) in blogposts" :data-index="index" :key="`post-${index}`" v-bind="post"></blog-post>
         </transition-group>
     </div>
@@ -32,19 +31,9 @@
         data() {
             return {
                 page: 0,
-                // blogposts: []
             }
         },
         apollo: {
-/*            blogPage: {
-                query: gql`query blogPage($page: Int!, $pageSize: Int!) {
-                    blogPage(page: $page, size: $pageSize) {
-                        blogposts {
-                            title
-                        }
-                    }
-                }`
-            },*/
             blogposts: {
                 query: BLOG_POSTS
             },
@@ -55,7 +44,7 @@
                 el.style.top = "100px";
             },
             enter(el, done) {
-                const delay = (el.dataset.index * 100);
+                const delay = (el.dataset.index * 100) + 300; // + 300 is page transition delay
                 setTimeout(() => {
                     TweenLite.to(el, 0.2, {
                         opacity: 1,

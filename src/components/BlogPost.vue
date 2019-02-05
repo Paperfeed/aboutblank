@@ -2,7 +2,7 @@
     <div class="blog-post">
         <h2><a :href="slug">{{title}}</a></h2>
         <div style="float: left">
-            <Author v-bind="author" :date="date"/>
+            <Author v-bind="author" class="black" :date="date"/>
         </div>
         <p>{{content}}</p>
     </div>
