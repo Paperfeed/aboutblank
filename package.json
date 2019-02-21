@@ -16,15 +16,10 @@
   },
   "gh-pages-deploy": {
     "staticpath": "dist",
-    "cname": "nope.org",
     "prep": [
-      "build-sass",
-      "optimize-img"
+      "build"
     ],
-    "commit": "a custom commit message",
-    "post": [
-      "clean-source"
-    ],
+    "commit": "Update distribution build",
     "noprompt": false
   },
   "dependencies": {
