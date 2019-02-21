@@ -11,16 +11,7 @@
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "test:unit": "vue-cli-service test:unit",
-    "deploy": "gh-pages-deploy",
-    "clean-source": "rimraf README.md src webroot package.json"
-  },
-  "gh-pages-deploy": {
-    "staticpath": "dist",
-    "prep": [
-      "build"
-    ],
-    "commit": "Update distribution build",
-    "noprompt": false
+    "deploy": "deploy.sh"
   },
   "dependencies": {
     "bulma": "^0.7.4",
@@ -51,7 +42,6 @@
     "@vue/cli-service": "^3.4.1",
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
-    "gh-pages-deploy": "^0.5.1",
     "graphql-tag": "^2.10.1",
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0",
