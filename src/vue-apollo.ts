@@ -33,6 +33,7 @@ const defaultOptions = {
     websocketsOnly: false,
     // Is being rendered on the server?
     ssr: false,
+    freezeResults: false,
 
     // Override default apollo link
     // note: don't override httpLink here, specify httpLink options in the
