@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueApollo from 'vue-apollo';
 import { createApolloClient, restartWebsockets } from 'vue-cli-plugin-apollo/graphql-client';
 import { VueApolloClient } from '@/shims-tsx';
-
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
 // Install the vue plugin
 Vue.use(VueApollo);
@@ -33,7 +33,7 @@ const defaultOptions = {
     websocketsOnly: false,
     // Is being rendered on the server?
     ssr: false,
-    freezeResults: false,
+    cache: new InMemoryCache(),
 
     // Override default apollo link
     // note: don't override httpLink here, specify httpLink options in the
@@ -63,7 +63,7 @@ export function createProvider(options = {}) {
     apolloClient.wsClient = wsClient;
 
     // Create vue apollo provider
-    const apolloProvider = new VueApollo({
+    return new VueApollo({
         defaultClient: apolloClient,
         defaultOptions: {
             $query: {
@@ -79,8 +79,6 @@ export function createProvider(options = {}) {
             );
         },
     });
-
-    return apolloProvider;
 }
 
 // Manually call this when user log in
